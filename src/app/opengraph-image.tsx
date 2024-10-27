@@ -1,7 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import { ImageResponse } from 'next/og'
-
+export const size = {
+  width: 1200,
+  height: 630,
+}
+export const alt = 'report-formatter'
 export default async function Image() {
   const logoImage = 'logo-image.png'
   const logoSrc = new URL(
@@ -30,5 +34,8 @@ export default async function Image() {
         />
       </div>
     ),
+    {
+      ...size,
+    },
   )
 }
