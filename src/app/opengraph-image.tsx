@@ -2,8 +2,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { ImageResponse } from 'next/og'
 
+import image from '../../public/logo-image.png'
+
 export default async function Image() {
-  const logoImage = new URL('logo-image.png', import.meta.url)
+  const logoImage = image.src
+  const logoSrc = new URL(logoImage, import.meta.url).toString()
 
   return new ImageResponse(
     (
@@ -18,7 +21,7 @@ export default async function Image() {
         }}
       >
         <img
-          src={logoImage.href}
+          src={logoSrc}
           alt=""
           style={{ width: '60%' }}
           height={100}
