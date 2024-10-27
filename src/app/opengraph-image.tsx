@@ -6,7 +6,7 @@ export default async function Image() {
   const logoImage = 'logo-image.png'
   const logoSrc = new URL(
     logoImage,
-    'https://report-formatter.vercel.app',
+    'https://report-formatter.vercel.app/',
   ).toString()
 
   return new ImageResponse(
@@ -25,8 +25,8 @@ export default async function Image() {
           src={logoSrc}
           alt=""
           style={{ width: '60%' }}
-          height={100}
-          width={100}
+          height={60}
+          width={60}
         />
       </div>
     ),
