@@ -4,7 +4,10 @@ import { ImageResponse } from 'next/og'
 
 export default async function Image() {
   const logoImage = 'logo-image.png'
-  const logoSrc = new URL(logoImage, import.meta.url).toString()
+  const logoSrc = new URL(
+    logoImage,
+    'https://report-formatter.vercel.app',
+  ).toString()
 
   return new ImageResponse(
     (
