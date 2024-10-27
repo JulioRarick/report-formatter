@@ -79,7 +79,7 @@ export function TextareaLogic() {
             </Button>
           </div>
         </div>
-        <div className="grid w-full select-none gap-1.5 py-4 lg:px-8 lg:py-2">
+        <div className="grid w-full select-none gap-1.5 p-4 lg:px-8 lg:py-2">
           <Label
             htmlFor="formatted"
             className="flex items-center gap-1 px-3 text-sm font-medium tracking-tight text-gray-500 lg:text-lg"
@@ -89,7 +89,7 @@ export function TextareaLogic() {
           </Label>
           <div
             id="formatted"
-            className={`h-64 w-full overflow-y-auto rounded-md border border-gray-300 p-4 shadow-lg dark:border-gray-700 lg:h-96 ${
+            className={`h-64 w-full overflow-y-auto rounded-md border border-gray-300 p-4 shadow-lg dark:border-gray-800 lg:h-96 ${
               formattedText
                 ? 'text-justify text-gray-950'
                 : 'flex items-center justify-center text-sky-700'
