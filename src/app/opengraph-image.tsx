@@ -3,11 +3,10 @@
 import { ImageResponse } from 'next/og'
 
 export default async function Image() {
-  const logoImage = 'logo-image.png'
-  const logo = new URL(
-    logoImage,
-    'https://report-formatter.vercel.app/',
-  ).toString()
+  const logoSrc = await fetch(
+    new URL('./logo-image.png', import.meta.url),
+  ).then((res) => res.url)
+
   return new ImageResponse(
     (
       <div
@@ -21,7 +20,7 @@ export default async function Image() {
         }}
       >
         <img
-          src={logo}
+          src={logoSrc}
           alt=""
           style={{ width: '60%' }}
           height={100}
