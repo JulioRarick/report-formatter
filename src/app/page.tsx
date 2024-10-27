@@ -39,7 +39,7 @@ export default function Home() {
       <footer className="flex h-full w-full select-none flex-col items-center justify-center pt-6">
         <article className="flex items-center justify-center gap-3">
           <Link
-            href="https://"
+            href="https://instagram.com/rarickn"
             className="rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-800"
           >
             <InstagramLogoIcon className="h-6 w-6 text-foreground" />
