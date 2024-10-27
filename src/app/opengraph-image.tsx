@@ -2,10 +2,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { ImageResponse } from 'next/og'
 
-import image from '../../public/logo-image.png'
-
 export default async function Image() {
-  const logoImage = image.src
+  const logoImage = '../../public/logo-image.png'
   const logoSrc = new URL(logoImage, import.meta.url).toString()
 
   return new ImageResponse(
