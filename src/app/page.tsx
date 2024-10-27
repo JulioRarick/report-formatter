@@ -52,7 +52,7 @@ export default function Home() {
             <LinkedInLogoIcon className="h-6 w-6 text-foreground" />
           </Link>
           <Link
-            href="https://github.com/JulioRarick"
+            href="https://github.com/JulioRarick/report-formatter"
             target="_blank"
             className="rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-800"
           >
