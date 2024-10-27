@@ -3,7 +3,7 @@
 import { ImageResponse } from 'next/og'
 
 export default async function Image() {
-  const logoImage = '../../public/logo-image.png'
+  const logoImage = '/public/logo-image.png'
   const logoSrc = new URL(logoImage, import.meta.url).toString()
 
   return new ImageResponse(
