@@ -3,10 +3,7 @@
 import { ImageResponse } from 'next/og'
 
 export default async function Image() {
-  const logoImage = new URL('/public/logo-image.png', import.meta.url)
-  const logoSrc = await fetch(new URL(logoImage, import.meta.url)).then(
-    (res) => res.url,
-  )
+  const logoImage = new URL('logo-image.png', import.meta.url)
 
   return new ImageResponse(
     (
@@ -21,7 +18,7 @@ export default async function Image() {
         }}
       >
         <img
-          src={logoSrc}
+          src={logoImage.href}
           alt=""
           style={{ width: '60%' }}
           height={100}
