@@ -1,5 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
+import { promises as fs } from 'node:fs'
+import { join } from 'node:path'
+
 import { ImageResponse } from 'next/og'
 export const size = {
   width: 1200,
@@ -8,9 +11,8 @@ export const size = {
 export const alt = 'report-formatter'
 
 export default async function Image() {
-  const logoSrc = await fetch(
-    new URL('./logo-image.png', import.meta.url),
-  ).then((res) => res.url)
+  const logoData = await fs.readFile(join(process.cwd(), 'logo-image.png'))
+  const logoSrc = Uint8Array.from(logoData).buffer
 
   return new ImageResponse(
     (
@@ -25,7 +27,7 @@ export default async function Image() {
         }}
       >
         <img
-          src={logoSrc}
+          src={logoSrc.toString()}
           alt=""
           style={{ width: '60%' }}
           height={60}
