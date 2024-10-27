@@ -3,9 +3,9 @@
 import { ImageResponse } from 'next/og'
 
 export default async function Image() {
-  const logoSrc = await fetch(
-    new URL('./logo-image.png', import.meta.url),
-  ).then((res) => res.url)
+  const logoSrc = await fetch(new URL('/logo-image.png', import.meta.url)).then(
+    (res) => res.url,
+  )
 
   return new ImageResponse(
     (
