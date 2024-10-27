@@ -16,7 +16,13 @@ export default async function Image() {
           justifyContent: 'center',
         }}
       >
-        <img src={logo} alt="" style={{ width: '60%' }} />
+        <img
+          src={logo}
+          alt=""
+          style={{ width: '60%' }}
+          height={100}
+          width={100}
+        />
       </div>
     ),
   )
