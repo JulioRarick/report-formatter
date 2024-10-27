@@ -89,7 +89,7 @@ export function TextareaLogic() {
           </Label>
           <div
             id="formatted"
-            className={`h-64 w-full overflow-y-auto rounded-md border border-gray-300 p-4 shadow-lg dark:border-gray-500 lg:h-96 ${
+            className={`h-64 w-full overflow-y-auto rounded-md border border-gray-300 p-4 shadow-lg dark:border-gray-700 lg:h-96 ${
               formattedText
                 ? 'text-justify text-gray-950'
                 : 'flex items-center justify-center text-sky-700'
