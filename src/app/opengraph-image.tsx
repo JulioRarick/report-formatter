@@ -6,12 +6,11 @@ export const size = {
   height: 630,
 }
 export const alt = 'report-formatter'
+
 export default async function Image() {
-  const logoImage = 'logo-image.png'
-  const logoSrc = new URL(
-    logoImage,
-    'https://report-formatter.vercel.app',
-  ).toString()
+  const logoSrc = await fetch(
+    new URL('./logo-image.png', import.meta.url),
+  ).then((res) => res.url)
 
   return new ImageResponse(
     (
