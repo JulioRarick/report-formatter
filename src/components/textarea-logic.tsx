@@ -26,7 +26,7 @@ export function TextareaLogic() {
     setFormattedText(formatText(inputText))
   }
 
-  function copyToClipboard(formattedText: string) {
+  async function copyToClipboard(formattedText: string) {
     try {
       const htmlContent = `
     <div style="text-align: justify;">${formattedText}</div>
@@ -35,7 +35,7 @@ export function TextareaLogic() {
       const blob = new Blob([htmlContent], { type: 'text/html' })
       const data = [new ClipboardItem({ 'text/html': blob })]
 
-      navigator.clipboard.write(data).then(() =>
+      await navigator.clipboard.write(data).then(() =>
         toast({
           title: 'Texto copiado',
           description:
@@ -91,7 +91,7 @@ export function TextareaLogic() {
             id="formatted"
             className={`h-64 w-full overflow-y-auto rounded-md border border-gray-300 p-4 shadow-lg dark:border-gray-800 lg:h-96 ${
               formattedText
-                ? 'text-justify text-gray-950'
+                ? 'text-justify text-gray-950 dark:text-white'
                 : 'flex items-center justify-center text-sky-700'
             }`}
           >
